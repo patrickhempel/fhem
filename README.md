@@ -8,7 +8,8 @@ This docker image contains FHEM and homebridge and is based on Debian Jessie.
 ## Run:
 ```
 docker run -d \
-		   --net=host \
+	   --net=host \
+	   -v fhem.cfg:/opt/fhem/fhem.cfg
            -p 8083:8083 \
            -p 51826:51826 \
            dobsiin/fhem
